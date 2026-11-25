@@ -35,7 +35,7 @@ Users can open accounts, deposit and withdraw money, transfer between accounts a
 ./mvnw test
 ```
 
-On Windows, use `mvnw.cmd` instead of `./mvnw`.
+On Windows, use `mvnw.cmd` instead of `bank/mvnw`.
 
 ## API
 
