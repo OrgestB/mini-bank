@@ -43,12 +43,12 @@ public class AccountController {
     }
 
     @PostMapping("/{id}/deposit")
-    public AccountResponse deposit(@Valid @PathVariable String id, @RequestBody AmountRequest request) {
+    public AccountResponse deposit(@PathVariable String id, @Valid @RequestBody AmountRequest request) {
         return AccountResponse.from(accountService.deposit(id, request.amount()));
     }
 
     @PostMapping("/{id}/withdraw")
-    public AccountResponse withdraw(@Valid @PathVariable String id, @RequestBody AmountRequest request) {
+    public AccountResponse withdraw(@PathVariable String id, @Valid @RequestBody AmountRequest request) {
         return AccountResponse.from(accountService.withdraw(id, request.amount()));
     }
 
