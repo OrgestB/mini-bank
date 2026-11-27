@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:18
+    container_name: bank-db
+    environment:
+      POSTGRES_DB: bank
+      POSTGRES_USER: bank
+      POSTGRES_PASSWORD: bank
+    ports:
+      - "5432:5432"
+    volumes:
+      - bank-data:/var/lib/postgresql
+
+volumes:
+  bank-data:
